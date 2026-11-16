@@ -1,7 +1,7 @@
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-public class Main {
+public class dMain {
     public static void main(String[] args) {
         Entrada entrada = new Entrada(new Scanner(System.in));
         Impressora impressora = new Impressora();

@@ -4,7 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 
-
+/** Guarda a configuracao e controla o ciclo de vida da conexao. */
 public class Impressora {
     private int tipo = 1;
     private String modelo = "i9";
@@ -137,7 +137,7 @@ public class Impressora {
         }, false);
     }
 
-
+    /** Texto aceita retorno positivo; os demais comandos exigem zero. */
     private boolean executar(String nome, IntSupplier comando, boolean retornoTexto) {
         try {
             int retorno = comando.getAsInt();

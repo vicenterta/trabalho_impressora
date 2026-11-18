@@ -1,4 +1,4 @@
-
+/** Credenciais de demonstracao para o trabalho de POO. */
 public class Usuario {
     private final String login;
     private final String senha;

@@ -1,4 +1,4 @@
-
+/** Contrato para isolar o hardware e permitir testes sem impressora. */
 public interface DispositivoImpressora {
     int abrir(int tipo, String modelo, String conexao, int parametro);
     int fechar();

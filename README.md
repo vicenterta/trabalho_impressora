@@ -67,11 +67,8 @@ As opções 4 a 13 verificam a conexão antes de pedir dados. Cada comando verif
 
 Execute `testar.cmd`. Foram verificadas 38 condições, incluindo login, três falhas, números inválidos, bloqueio antes das perguntas, falha de abertura, DLL indisponível, cópias, retorno positivo de texto, interrupção após erro, assinatura do cancelamento, XML ausente/vazio, estados de papel e fechamento. Os testes usam um dispositivo falso: **não comprovam impressão física**.
 
-<<<<<<< HEAD
 ### Testes pendentes na escola
-=======
 Testes pendentes na escola
->>>>>>> 1fd2dcd4aeb93d42a2c9dc67e8458011a9f08c71
 
 - [ ] Abrir e fechar conexão na i8/i9 e registrar modelo/porta utilizados.
 - [ ] Imprimir texto e várias cópias; conferir alinhamento e estilo.
@@ -80,14 +77,4 @@ Testes pendentes na escola
 - [ ] Verificar avanço, corte, status, bip e gaveta disponível.
 - [ ] Repetir cenário de erro/desconexão e conferir mensagens.
 
-## Histórico e envio posterior
 
-Os cinco commits representam preparação, login, conexão, operações e documentação/testes. A pasta oculta `.git` guarda esse histórico: preserve-a. O arquivo bundle entregue junto ao projeto também guarda os commits e pode ser restaurado com `git clone ImpressoraElgin.bundle ImpressoraElgin`.
-
-Após conectar a conta correta, crie um repositório vazio nela e envie a branch `main` para esse destino. Não é necessário refazer os commits. O nome/e-mail de autoria Git deve ser conferido antes da publicação; a autoria local foi herdada da configuração existente do PC. Não foram inventadas contribuições das outras integrantes. Se o professor exigir commits de cada integrante, elas devem realizar suas próprias contribuições.
-
-## Referências e créditos
-
-Enunciado e arquivos iniciais fornecidos pela disciplina. Referência consultada, a pedido do grupo: https://github.com/leobiz0/projeto_impressora (organização em classes e fluxo de menu). A implementação foi escrita/adaptada com assistência de IA, incluindo tratamento centralizado de erros e testes sem hardware. As integrantes devem revisar e compreender o código para a apresentação.
-
-Documentação Elgin indicada pelo enunciado: https://elgindevelopercommunity.github.io/group___m1.html

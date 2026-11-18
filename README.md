@@ -67,7 +67,11 @@ As opções 4 a 13 verificam a conexão antes de pedir dados. Cada comando verif
 
 Execute `testar.cmd`. Foram verificadas 38 condições, incluindo login, três falhas, números inválidos, bloqueio antes das perguntas, falha de abertura, DLL indisponível, cópias, retorno positivo de texto, interrupção após erro, assinatura do cancelamento, XML ausente/vazio, estados de papel e fechamento. Os testes usam um dispositivo falso: **não comprovam impressão física**.
 
+<<<<<<< HEAD
 ### Testes pendentes na escola
+=======
+Testes pendentes na escola
+>>>>>>> 1fd2dcd4aeb93d42a2c9dc67e8458011a9f08c71
 
 - [ ] Abrir e fechar conexão na i8/i9 e registrar modelo/porta utilizados.
 - [ ] Imprimir texto e várias cópias; conferir alinhamento e estilo.

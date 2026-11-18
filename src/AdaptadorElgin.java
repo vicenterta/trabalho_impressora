@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /** Carrega a DLL apenas quando o usuario solicita uma operacao real. */
+=======
+
+>>>>>>> 1fd2dcd4aeb93d42a2c9dc67e8458011a9f08c71
 public class AdaptadorElgin implements DispositivoImpressora {
     public int abrir(int tipo, String modelo, String conexao, int parametro) {
         return ImpressoraDLL.INSTANCE.AbreConexaoImpressora(tipo, modelo, conexao, parametro);

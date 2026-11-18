@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /** Credenciais de demonstracao para o trabalho de POO. */
+=======
+
+>>>>>>> 1fd2dcd4aeb93d42a2c9dc67e8458011a9f08c71
 public class Usuario {
     private final String login;
     private final String senha;

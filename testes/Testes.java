@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/** Testes de comportamento com dispositivo falso; nao comandam a impressora real. */
 public class Testes {
     private static int verificacoes;
 
@@ -121,7 +120,7 @@ public class Testes {
         conferir(hw.chamadas.equals(List.of("qrCode")), "QR falho nao avanca papel");
         hw.retorno = 0;
         capturar(() -> impressora.imprimirCodigoBarras(8, "12345", 100, 2, 2));
-        // Consulta especifica dos argumentos do codigo antes do avanco automatico.
+
         List<Object[]> codigo = new ArrayList<>();
         DispositivoImpressora monitor = (DispositivoImpressora) Proxy.newProxyInstance(
                 DispositivoImpressora.class.getClassLoader(), new Class<?>[]{DispositivoImpressora.class},

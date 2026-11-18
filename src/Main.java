@@ -1,7 +1,7 @@
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-public class dMain {
+public class Main {
     public static void main(String[] args) {
         Entrada entrada = new Entrada(new Scanner(System.in));
         Impressora impressora = new Impressora();
@@ -36,7 +36,7 @@ public class dMain {
                     0  - Sair
                     """);
             int opcao = entrada.inteiro("Opcao: ", 0, 13);
-            // Bloqueia ANTES de perguntar texto, arquivo, quantidade ou outros dados.
+
             if (opcao >= 4 && !impressora.exigirConexao()) continue;
             switch (opcao) {
                 case 0 -> { System.out.println("Ate logo!"); return; }

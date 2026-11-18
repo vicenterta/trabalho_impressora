@@ -3,11 +3,6 @@ import com.sun.jna.Native;
 
 import java.nio.file.Paths;
 
-/**
- * Interface JNA que representa a DLL da Elgin. NÃO ALTERAR.
- * A DLL é escolhida pela arquitetura da JVM (x64 ou x86), a partir da pasta
- * "Bibliotecas E1 Impressora" que deve estar na raiz do projeto.
- */
 public interface ImpressoraDLL extends Library {
 
     ImpressoraDLL INSTANCE = (ImpressoraDLL) Native.load(caminhoDll(), ImpressoraDLL.class);

@@ -4,7 +4,6 @@ import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 
-
 public class Impressora {
     private int tipo = 1;
     private String modelo = "i9";
@@ -136,7 +135,6 @@ public class Impressora {
             return 0;
         }, false);
     }
-
 
     private boolean executar(String nome, IntSupplier comando, boolean retornoTexto) {
         try {

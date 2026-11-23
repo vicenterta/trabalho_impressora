@@ -1,11 +1,6 @@
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-<<<<<<< HEAD
-/** Centraliza leitura, validacao e o tratamento do fim da entrada. */
-=======
-
->>>>>>> 1fd2dcd4aeb93d42a2c9dc67e8458011a9f08c71
 public class Entrada {
     private final Scanner scanner;
 

@@ -4,6 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 
+
 public class Impressora {
     private int tipo = 1;
     private String modelo = "i9";
@@ -69,19 +70,19 @@ public class Impressora {
         for (int copia = 1; copia <= copias; copia++) {
             if (!executar("Imprimir copia " + copia, () -> dispositivo.texto(texto + "\n", posicao, estilo, tamanho), true)) return;
         }
-        avancarPapel(3);
+        cortarPapel(5);
     }
 
     public void imprimirQRCode(String dados, int tamanho, int correcao) {
         if (!exigirConexao()) return;
-        if (executar("Imprimir QR Code", () -> dispositivo.qrCode(dados, tamanho, correcao), false)) avancarPapel(3);
+        if (executar("Imprimir QR Code", () -> dispositivo.qrCode(dados, tamanho, correcao), false)) cortarPapel(5);
     }
 
     public void imprimirCodigoBarras(int tipoCodigo, String dados, int altura, int largura, int hri) {
         if (!exigirConexao()) return;
         // A DLL exige a selecao do conjunto de caracteres no CODE 128.
         String conteudo = tipoCodigo == 8 && !dados.startsWith("{") ? "{A" + dados : dados;
-        if (executar("Imprimir codigo de barras", () -> dispositivo.codigoBarras(tipoCodigo, conteudo, altura, largura, hri), false)) avancarPapel(3);
+        if (executar("Imprimir codigo de barras", () -> dispositivo.codigoBarras(tipoCodigo, conteudo, altura, largura, hri), false)) cortarPapel(5);
     }
 
     public void imprimirXml(String arquivo, boolean cancelamento) {
@@ -93,9 +94,9 @@ public class Impressora {
                 return;
             }
             if (cancelamento) {
-                executar("Imprimir cancelamento SAT", () -> dispositivo.xmlCancelamento(xml, ASS_QRCODE_CANCELAMENTO), false);
+                if (executar("Imprimir cancelamento SAT", () -> dispositivo.xmlCancelamento(xml, ASS_QRCODE_CANCELAMENTO), false)) cortarPapel(5);
             } else {
-                executar("Imprimir XML SAT", () -> dispositivo.xmlVenda(xml), false);
+                if (executar("Imprimir XML SAT", () -> dispositivo.xmlVenda(xml), false)) cortarPapel(5);
             }
         } catch (IOException | InvalidPathException | SecurityException e) {
             System.out.println("Nao foi possivel ler o arquivo XML: " + e.getMessage());
@@ -107,7 +108,7 @@ public class Impressora {
     }
 
     public void sinalSonoro(int quantidade) {
-        if (exigirConexao()) executar("Sinal sonoro", () -> dispositivo.bip(quantidade, 50, 5), false);
+        if (exigirConexao()) executar("Sinal sonoro", () -> dispositivo.bip(quantidade, 10, 5), false);
     }
 
     public void avancarPapel(int linhas) {
@@ -135,6 +136,7 @@ public class Impressora {
             return 0;
         }, false);
     }
+
 
     private boolean executar(String nome, IntSupplier comando, boolean retornoTexto) {
         try {
